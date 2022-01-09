@@ -1,3 +1,33 @@
 # EndeavourOS Awemsome WM Community Edition
 
-Setup for EndeavourOS awesome wm community edition.
+**Awesome EndeavorOS Community Edition**
+
+
+## To Install manually
+
+    git clone https://github.com/EndeavourOS-Community-Editions/awesome.git
+
+    cd awesome
+
+    bash awesome-install.sh
+   
+## Contained In The Script
+    cp -R .config/* ~/.config/
+        
+    cp .gtkrc-2.0 ~/.gtkrc-2.0
+  
+    sudo pacman -Syu --needed --noconfirm - < awesome.txt
+    
+    dbus-launch dconf load / < xed.dconf
+    
+## Get involved at our forum:
+https://forum.endeavouros.com/c/desktop-environments/awesome
+
+## Tutorial for awesomewm settings:
+- Background handled by nitrogen
+- Filebrowser = Thunar
+- Default Terminal-Emulator = xfce4-terminal
+- Text-Editor = xed
+
+
+![awesome](https://raw.githubusercontent.com/EndeavourOS-Community-Editions/awesome/master/calamares/awesome.jpg)
