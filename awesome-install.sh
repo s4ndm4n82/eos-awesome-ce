@@ -4,5 +4,5 @@
 
 mkdir -p ~/.config
 cp -R .config/* ~/.config/
-sudo pacman -Syu --needed --noconfirm - < awesome.txt
+sudo pacman -Syu --needed --noconfirm - < calamares/awesome.txt
 dbus-launch dconf load / < xed.dconf
