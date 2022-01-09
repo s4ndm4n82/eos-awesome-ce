@@ -1,4 +1,4 @@
-# EndeavourOS Awemsome WM Community Edition
+# EndeavourOS Awesome WM Community Edition
 
 **Awesome EndeavorOS Community Edition**
 
