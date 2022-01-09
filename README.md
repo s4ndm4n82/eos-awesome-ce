@@ -34,4 +34,4 @@ https://forum.endeavouros.com/c/desktop-environments/awesome
 - Text-Editor = xed
 
 
-![awesome](https://raw.githubusercontent.com/EndeavourOS-Community-Editions/awesome/master/calamares/awesome.jpg)
+![awesome](https://raw.githubusercontent.com/EndeavourOS-Community-Editions/awesome/master/awesome-screenshot.png)
