@@ -25,7 +25,7 @@
     dbus-launch dconf load / < xed.dconf
     
 ## Get involved at our forum:
-https://forum.endeavouros.com/c/desktop-environments/awesome
+https://forum.endeavouros.com/c/desktop-environments/22/none
 
 ## Tutorial for awesomewm settings:
 - Background handled by nitrogen
