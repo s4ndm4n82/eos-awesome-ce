@@ -795,7 +795,7 @@ local autoRunApps = {
     "dex --autostart --environment awesome",
     "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1",
     "xrandr --output Virtual-1 --mode 1920x1080", -- Comment this line if yo're using the one above.
-    "sleep 1 && picom -b",
+    "sleep 1 && picom -b --config  $HOME/.config/picom/picom.conf",
     -- "sleep 1 && picom -b --experimental-backends --config  $HOME/.config/picom/picom.conf",
     -- Use arandr to setup the display and save it as monitor.sh. Uncomment the below line if you wish to use it.    
     --"$HOME/.screenlayout/monitor.sh",    
