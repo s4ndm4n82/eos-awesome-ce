@@ -28,7 +28,6 @@
 https://forum.endeavouros.com/c/desktop-environments/22/none
 
 ## Tutorial for awesomewm settings:
-- Background handled by nitrogen
 - Filebrowser = Thunar
 - Default Terminal-Emulator = xfce4-terminal
 - Text-Editor = xed
