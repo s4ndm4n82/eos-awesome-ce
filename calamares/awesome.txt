@@ -10,6 +10,7 @@ awesome-terminal-fonts
 bison
 capitaine-cursors
 celluloid
+dex
 dunst
 eos-skel-ce-awesome
 endeavouros-xfce4-terminal-colors
@@ -39,6 +40,10 @@ power-profiles-daemon
 rofi
 scrot
 sysstat
+thunar
+thunar-archive-plugin
+thunar-volman
+tumbler
 xdg-user-dirs-gtk
 xed
 xfce4-terminal
