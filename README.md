@@ -9,7 +9,7 @@
 
     cd awesome
 
-    bash awesome-install.sh
+    bash awesome-install
    
 ## Contained In The Script
     cp -R .config/* ~/.config/
