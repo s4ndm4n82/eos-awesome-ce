@@ -129,8 +129,8 @@ awful.util.terminal     = terminal
 -- Tage names
 -- Use this for reference : https://fontawesome.com/cheatsheet
 
-awful.util.tagnames = {  "➊", "➋", "➌", "➍", "➎", "➏", "➐", "➑", "➒", "➓" }
---awful.util.tagnames = {  "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }
+awful.util.tagnames = {  "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }
+--awful.util.tagnames = {  "➊", "➋", "➌", "➍", "➎", "➏", "➐", "➑", "➒", "➓" }
 --awful.util.tagnames = { " DEV ", " WWW ", " SYS ", " DOC ", " VBOX ", " CHAT ", " MUS ", " VID ", " GFX " }
 --awful.util.tagnames = { "⠐", "⠡", "⠲", "⠵", "⠻", "⠿" }
 --awful.util.tagnames = { "⌘", "♐", "⌥", "ℵ" }
@@ -279,6 +279,8 @@ local globalKeys = myTable.join(
 
     -- Awesome
     awful.key({ modkey }, "F1", hotkeys_popup.show_help,
+        {description = "Launches this help.", group="Awesome"}),
+    awful.key({ modkey }, "s", hotkeys_popup.show_help,
         {description = "Launches this help.", group="Awesome"}),
     awful.key({ modkey }, "r", awesome.restart,
         {description = "Reloads awesome.", group="Awesome"}),
