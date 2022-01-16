@@ -319,6 +319,8 @@ local globalKeys = myTable.join(
         {description = "Launch default terminal editor.", group = "Hotkeys" }),
     awful.key({ modkey }, "l", function () awful.util.spawn( lockscreen ) end,
         {description = "Locks the screen on demand.", group = "Hotkeys" }),
+    awful.key({ modkey }, "c", function () awful.util.spawn( "code" ) end,
+        {description = "Launches Visual Studio Code.", group = "Hotkeys" }),
     
     -- Copy primary to clipboard (terminals to gtk)    
     awful.key({ modkey, ctrl }, "c", function () awful.spawn.with_shell("xsel | xsel -i -b") end,
@@ -330,7 +332,7 @@ local globalKeys = myTable.join(
     -- Super + ... eos apps.
     awful.key({ modkey, "Shift" }, "w", function () awful.util.spawn( "eos-welcome --enable" ) end,
         {description = "EndeavourOS welcome app.", group = "EOS Apps" }),
-    awful.key({ modkey, "Shift" }, "l", function () awful.util.spawn( "eos-log-tool" ) end,
+    awful.key({ ctrl, altkey }, "l", function () awful.util.spawn( "eos-log-tool" ) end,
         {description = "EndeavourOS log tool.", group = "EOS Apps" }),
     awful.key({ modkey, "Shift" }, "i", function () awful.util.spawn( "eos-apps-info" ) end,
         {description = "EndeavourOS log tool.", group = "EOS Apps" }),
@@ -350,7 +352,7 @@ local globalKeys = myTable.join(
         {description = "Decrease master width factor.", group = "Layout"}),
     awful.key({ modkey, "Shift" }, "h", function () awful.tag.incnmaster( 1, nil, true) end,
         {description = "Increase the number of master clients.", group = "Layout"}),
-    awful.key({ ctrl, "Shift" }, "l", function () awful.tag.incnmaster(-1, nil, true) end,
+    awful.key({ modkey, "Shift" }, "l", function () awful.tag.incnmaster(-1, nil, true) end,
         {description = "Decrease the number of master clients.", group = "Layout"}),
     awful.key({ modkey, ctrl }, "h", function () awful.tag.incncol( 1, nil, true) end,
         {description = "Increase the number of columns.", group = "Layout"}),
@@ -358,7 +360,7 @@ local globalKeys = myTable.join(
         {description = "Decrease the number of columns.", group = "Layout"}),
     awful.key({ modkey }, "space", function () awful.layout.inc( 1) end,
         {description = "select next", group = "Layout"}),
-    --awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1) end,
+    --awful.key({ modkey, "Shift"}, "space", function () awful.layout.inc(-1) end,
         -- {description = "select previous", group = "Layout"}),
 
     -- Tag browsing with modkey
@@ -797,11 +799,10 @@ local autoRunApps = {
     "dex --autostart --environment awesome",
     "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1",
     "xrandr --output Virtual-1 --mode 1920x1080", -- Comment this line if yo're using the one above.
-    "sleep 1 && picom -b --config  $HOME/.config/picom/picom.conf",
-    -- "sleep 1 && picom -b --experimental-backends --config  $HOME/.config/picom/picom.conf",
+    "sleep 1 && picom -b --experimental-backends --config  $HOME/.config/picom/picom.conf",
     -- Use arandr to setup the display and save it as monitor.sh. Uncomment the below line if you wish to use it.    
     --"$HOME/.screenlayout/monitor.sh",    
-    -- "sleep 2 && nitrogen --restore"
+   -- "sleep 2 && nitrogen --restore"
 }
 
 if autoRun then
