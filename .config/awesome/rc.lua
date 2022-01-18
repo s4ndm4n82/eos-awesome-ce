@@ -1,8 +1,8 @@
 --[[
         EndeavourOS Awesome WM configuration template.
-        More info       : https://github.com/awesomeWM
+        More info       :   https://github.com/awesomeWM
 
-        Created by      : S4NDM4N
+        Created by      :   S4NDM4N
 
         Personal repo   :   https://github.com/s4ndm4n82/eos-awesome-ce
 
