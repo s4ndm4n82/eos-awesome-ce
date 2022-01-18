@@ -3,11 +3,7 @@
 _pkgname=awesome
 pkgname=eos-skel-ce-awesome
 pkgver=1.0
-<<<<<<< HEAD
 pkgrel=4
-=======
-pkgrel=3
->>>>>>> 4bd2a8727b4c7e1b4421b190c8c51f082c7db5f9
 pkgdesc="pre user creation skel setup for Awesome EOS-CE"
 arch=('any')
 groups=('eos-ce')
