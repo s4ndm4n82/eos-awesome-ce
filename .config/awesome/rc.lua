@@ -803,7 +803,7 @@ local autoRunApps = {
     "$HOME/.screenlayout/monitor.sh", -- Use ArandR to create the monitor.sh file.
     "dex --autostart --environment awesome",
     "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1",
-    "sleep 1 && picom -b --experimental-backends --config  $HOME/.config/picom/picom.conf",
+    "sleep 1 && picom -b --config  $HOME/.config/picom/picom.conf",
 }
 
 if autoRun then
