@@ -1,11 +1,15 @@
 --[[
         EndeavourOS Awesome WM configuration template.
-        More info : https://github.com/awesomeWM
+        More info       :   https://github.com/awesomeWM
 
-        Created by: S4NDM4N
+        Created by      :   S4NDM4N
+
+        Personal repo   :   https://github.com/s4ndm4n82/eos-awesome-ce
+
+        Offical repo    :   https://github.com/EndeavourOS-Community-Editions/awesome
 
         Used tecnologies
-
+        ~~~~~~~~~~~~~~~~
         freedesktop     :   https://github.com/lcpz/awesome-freedesktop
 
         Copycats themes :   https://github.com/lcpz/awesome-copycats
@@ -679,6 +683,8 @@ awful.rules.rules = {
         properties = { maximized = true, floating = false } },
     { rule = { class = "code" },
         properties = { maximized = false, floating = false } },
+    { rule = { class = "Arandr" },
+        properties = { maximized = false, floating = false } },
 
     -- Floating clients.
     { rule_any = {
@@ -688,7 +694,6 @@ awful.rules.rules = {
           "yad", -- For yad windows.
         },
         class = {
-          "Arandr",
           "Galculator",
           "Gpick",
           "Kruler",
@@ -794,15 +799,11 @@ local autoRun = true -- Makes the if statment to run if set false it will stop.
 local autoRunApps = {
     -- List all the apps you need to run on WM startup.
     "nm-applet",
-    "numlockx on",    
-    --"light-locker",
+    "numlockx on",
+    "$HOME/.screenlayout/monitor.sh", -- Use ArandR to create the monitor.sh file.
     "dex --autostart --environment awesome",
     "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1",
-    "xrandr --output Virtual-1 --mode 1920x1080", -- Comment this line if yo're using the one above.
     "sleep 1 && picom -b --experimental-backends --config  $HOME/.config/picom/picom.conf",
-    -- Use arandr to setup the display and save it as monitor.sh. Uncomment the below line if you wish to use it.    
-    --"$HOME/.screenlayout/monitor.sh",    
-   -- "sleep 2 && nitrogen --restore"
 }
 
 if autoRun then
