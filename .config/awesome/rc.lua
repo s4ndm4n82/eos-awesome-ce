@@ -493,34 +493,34 @@ local globalKeys = myTable.join(
                       c:raise()
                   end
               end,
-              {description = "Restore minimized.", group = "Slient"}),
+              {description = "Restore minimized.", group = "Client"}),
 
     -- ALSA volume control
-    awful.key({ modkey, "Shift"}, "Up",    
+    awful.key({ modkey, "Shift"}, "Up",
         function ()
             os.execute(string.format("amixer -q set %s 1%%+", beautiful.volume.channel))
-            beautiful.volume.update()
-        end),
+            beautiful.volume.update() end,
+            {description = "Volumn up.", group = "Audio"}),
     awful.key({ modkey, "Shift" }, "Down",
         function ()
             os.execute(string.format("amixer -q set %s 1%%-", beautiful.volume.channel))
-            beautiful.volume.update()
-        end),
+            beautiful.volume.update() end,
+            {description = "Volumn down.", group = "Audio"}),
     awful.key({ modkey, altkey }, "m",
         function ()
             os.execute(string.format("amixer -q set %s toggle", beautiful.volume.togglechannel or beautiful.volume.channel))
-            beautiful.volume.update()
-        end),
+            beautiful.volume.update() end,
+            {description = "Volumn mute.", group = "Audio"}),
     awful.key({ modkey, "Shift" }, "m",
         function ()
             os.execute(string.format("amixer -q set %s 100%%", beautiful.volume.channel))
-            beautiful.volume.update()
-        end),
+            beautiful.volume.update() end,
+            {description = "Volumn full.", group = "Audio"}),
     awful.key({ modkey, "Shift" }, "0",
         function ()
             os.execute(string.format("amixer -q set %s 0%%", beautiful.volume.channel))
-            beautiful.volume.update()
-        end)
+            beautiful.volume.update() end,
+            {description = "Volumn 0.", group = "Audio"})
 
     -- }}}
 )
@@ -528,7 +528,7 @@ local globalKeys = myTable.join(
 local clientKeys = myTable.join(
     awful.key({ altkey, "Shift" }, "m", lain.util.magnify_client,
               {description = "Magnify client", group = "Client"}),
-    awful.key({ modkey,           }, "f",
+    awful.key({ modkey }, "f",
         function (c)
             c.fullscreen = not c.fullscreen
             c:raise()
@@ -551,7 +551,7 @@ local clientKeys = myTable.join(
             c.minimized = true
         end ,
         {description = "Minimize", group = "Client"}),
-    awful.key({ modkey,           }, "m",
+    awful.key({ modkey }, "m",
         function (c)
             c.maximized = not c.maximized
             c:raise()
@@ -802,8 +802,8 @@ local autoRunApps = {
     "numlockx on",
     "$HOME/.screenlayout/monitor.sh", -- Use ArandR to create the monitor.sh file.
     "dex --autostart --environment awesome",
-    "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1",
     "sleep 1 && picom -b --config  $HOME/.config/picom/picom.conf",
+    "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1",
 }
 
 if autoRun then
