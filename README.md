@@ -1,3 +1,5 @@
+## unmaintained needs contributors or maintainer
+
 # EndeavourOS Awesome WM Community Edition
 
 ## About
